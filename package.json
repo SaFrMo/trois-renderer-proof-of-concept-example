@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "three": "0.130.1",
-    "trois-renderer-proof-of-concept": "0.0.3",
+    "trois-renderer-proof-of-concept": "0.1.1338-dev",
     "vue": "^3.0.5"
   },
   "devDependencies": {

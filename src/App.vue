@@ -1,12 +1,14 @@
 <template>
     <TroisCanvas :cameraPosition="[2, 2, 5]">
-        <mesh ref="parent">
+        <mesh>
             <meshBasicMaterial :wireframe="true" />
 
-            <mesh :scale="0.5" ref="child" :visible="childVisible">
+            <mesh :scale="0.5" :visible="childVisible">
                 <meshBasicMaterial color="red" :wireframe="true" />
             </mesh>
         </mesh>
+
+        <!-- <gltf src="building_cabin.glb" /> -->
     </TroisCanvas>
 </template>
 
@@ -38,18 +40,14 @@ export default defineComponent({
     },
     methods: {
         update() {
-            requestAnimationFrame(this.update)
-
-            const newX = Math.sin(Date.now() * 0.001)
-
-            const instance: THREE.Mesh = (this.$refs.parent as any).instance
-            instance.position.x = newX
-
-            if (!this.$refs.child) return
-
-            const child: THREE.Mesh = (this.$refs.child as any).instance
-            child.position.x = newX
-            child.position.y = Math.cos(Date.now() * 0.001)
+            // requestAnimationFrame(this.update)
+            // const newX = Math.sin(Date.now() * 0.001)
+            // const instance: THREE.Mesh = (this.$refs.parent as any).instance
+            // instance.position.x = newX
+            // if (!this.$refs.child) return
+            // const child: THREE.Mesh = (this.$refs.child as any).instance
+            // child.position.x = newX
+            // child.position.y = Math.cos(Date.now() * 0.001)
         },
     },
 })
